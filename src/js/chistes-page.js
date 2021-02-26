@@ -9,7 +9,6 @@ const crearChistesHtml = () => {
     <button class="btn btn-primary">Otro chiste</button>
 
     <ol class="mt-2 list-group">
-        <li class="list-group-item"></li>
     </ol>`;
 
   const divChistes = document.createElement("div");
@@ -29,7 +28,7 @@ const eventos = () => {
 };
 
 const dibujarChiste = (chiste) => {
-  const contador = document.querySelectorAll("li").length;
+  const contador = "Chiste nº" + (document.querySelectorAll("li").length + 1);
   const olItem = document.createElement("li");
   olItem.innerHTML = `<b>${contador}</b>: ${chiste.value}`;
   // olItem.innerHTML = `<b>${contador} ${chiste.id}</b>: ${chiste.value}`;

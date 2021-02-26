@@ -10,7 +10,9 @@ const obtenerChiste = async () => {
 
     if (!resp.ok) throw "No se pudo realizar la petición";
 
-    return await resp.json();
+    const { value } = await resp.json();
+
+    return { value };
   } catch (error) {
     throw error;
   }
